@@ -9,7 +9,8 @@ import {
   RotateCcw,
   Sparkles,
   Camera,
-  Image as ImageIcon
+  Image as ImageIcon,
+  HardDrive
 } from 'lucide-react';
 import { GalleryPhoto, INITIAL_GALLERY_PHOTOS } from '../data/galleryData';
 import { saveDeviceMediaFile } from '../utils/mediaStorage';
@@ -303,6 +304,26 @@ export const GalleryAdminModal: React.FC<GalleryAdminModalProps> = ({
                       {currentPhoto.title}
                     </h4>
                   </div>
+                </div>
+
+                {/* 3GB Free Storage & Photo Recommendation Guide */}
+                <div className="p-3 rounded-xl bg-gradient-to-r from-[#0066FF]/15 to-white/5 border border-[#0066FF]/30 space-y-1">
+                  <div className="flex items-center justify-between text-xs font-bold text-white">
+                    <span className="flex items-center gap-1.5 text-[#0066FF]">
+                      <HardDrive className="w-3.5 h-3.5" />
+                      <span>3.0 GB Free Photo Storage</span>
+                    </span>
+                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300">
+                      2,000+ Photos Free
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-300">
+                    <span className="font-bold text-white">💡 Recommended Photo Size: </span>
+                    <span className="text-[#0066FF] font-bold">300 KB se 2 MB</span> per photo.
+                  </p>
+                  <p className="text-[10px] text-slate-400">
+                    Is size me photo ultra-sharp dikhegi aur visitors ke phone par turant load hogi!
+                  </p>
                 </div>
 
                 {/* Upload Button */}

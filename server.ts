@@ -33,12 +33,12 @@ async function startServer() {
     fs.mkdirSync(DIST_UPLOADS_DIR, { recursive: true });
   }
 
-  // Raw body parser for binary media upload and chunked streams (up to 1000MB)
+  // Raw body parser for binary media upload and chunked streams (up to 3.5 GB capacity)
   app.use(
     ['/api/upload-media', '/api/upload-chunk'],
     express.raw({
       type: ['image/*', 'video/*', 'application/octet-stream', '*/*'],
-      limit: '1000mb',
+      limit: '3500mb',
     })
   );
 
@@ -202,6 +202,51 @@ async function startServer() {
     } catch (err) {
       console.error('Error in /api/upload-media:', err);
       return res.status(500).json({ error: 'Server error saving uploaded media' });
+    }
+  });
+
+  // API 0: Storage Status (Calculates used storage vs 3GB free allocation & guides)
+  app.get('/api/storage-info', (_req, res) => {
+    try {
+      let totalBytes = 0;
+      let fileCount = 0;
+      if (fs.existsSync(UPLOADS_DIR)) {
+        const files = fs.readdirSync(UPLOADS_DIR);
+        fileCount = files.length;
+        for (const file of files) {
+          const filePath = path.join(UPLOADS_DIR, file);
+          try {
+            const stats = fs.statSync(filePath);
+            if (stats.isFile()) {
+              totalBytes += stats.size;
+            }
+          } catch {}
+        }
+      }
+
+      const totalCapacityMB = 3072; // 3.0 GB
+      const usedMB = parseFloat((totalBytes / (1024 * 1024)).toFixed(1));
+      const freeMB = Math.max(0, parseFloat((totalCapacityMB - usedMB).toFixed(1)));
+      const percentUsed = Math.min(100, Math.round((usedMB / totalCapacityMB) * 100));
+
+      return res.json({
+        success: true,
+        totalCapacityMB,
+        totalCapacityFormatted: '3.0 GB',
+        usedMB,
+        freeMB,
+        percentUsed,
+        fileCount,
+        recommendations: {
+          heroVideoMB: '5 MB - 15 MB (Max 100 MB)',
+          reelsVideoMB: '8 MB - 25 MB (Max 80 MB)',
+          photoGalleryMB: '300 KB - 2 MB (Max 15 MB)',
+          bannerPhotoMB: '200 KB - 1.5 MB',
+        },
+      });
+    } catch (err) {
+      console.error('Error calculating storage info:', err);
+      return res.status(500).json({ error: 'Failed to calculate storage info' });
     }
   });
 

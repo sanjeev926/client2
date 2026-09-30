@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { X, Check, RotateCcw, Sliders, Image as ImageIcon, Sparkles, Globe, Key, Phone, Tag, Upload, Loader2 } from 'lucide-react';
+import { X, Check, RotateCcw, Sliders, Image as ImageIcon, Sparkles, Globe, Key, Phone, Tag, Upload, Loader2, HardDrive } from 'lucide-react';
 import { uploadMediaToServer } from '../utils/mediaUpload';
 
 export interface PromoBannerConfig {
@@ -268,6 +268,23 @@ export const BannerCustomizerModal: React.FC<BannerCustomizerModalProps> = ({
             <p className="text-[11px] text-white/50">
               Note: Agar aap custom image URL dalte hain, toh banner background mein ya full graphic banner ke roop mein display hoga.
             </p>
+
+            {/* 3GB Free Storage & Banner Recommendation */}
+            <div className="p-3 rounded-xl bg-gradient-to-r from-[#D8F800]/10 to-transparent border border-[#D8F800]/30 space-y-1">
+              <div className="flex items-center justify-between text-xs font-bold">
+                <span className="flex items-center gap-1.5 text-[#D8F800]">
+                  <HardDrive className="w-3.5 h-3.5" />
+                  <span>3.0 GB Free Cloud Storage Active</span>
+                </span>
+                <span className="text-[10px] text-emerald-300 bg-emerald-500/20 px-2 py-0.5 rounded-full font-bold">
+                  Recommended: 200 KB - 1.5 MB
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-300">
+                <span className="font-bold text-white">💡 Tip: </span>
+                Banner photo ke liye <strong>200 KB se 1.5 MB</strong> ki wide photo choose karein taaki website speed superfast rahe.
+              </p>
+            </div>
           </div>
 
           {/* Contact & CTA Buttons */}

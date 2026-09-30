@@ -438,6 +438,32 @@ export const ReelsCustomizerModal: React.FC<ReelsCustomizerModalProps> = ({
 
           {/* Direct Device Upload Action Card (PROMINENT) */}
           <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-[#0066FF]/15 via-white/[0.03] to-white/[0.01] border border-[#0066FF]/30 space-y-4">
+            {/* 3GB FREE STORAGE & REELS RECOMMENDATION GUIDE */}
+            <div className="p-3.5 rounded-xl bg-black/40 border border-[#0066FF]/40 space-y-1.5">
+              <div className="flex items-center justify-between text-xs font-bold">
+                <span className="flex items-center gap-1.5 text-white">
+                  <HardDrive className="w-4 h-4 text-[#0066FF]" />
+                  <span>3.0 GB Free Cloud Storage Active</span>
+                </span>
+                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  Capacity: 150+ Dance Reels
+                </span>
+              </div>
+              <div className="text-xs text-slate-300 leading-relaxed">
+                <p>
+                  <span className="font-bold text-white">💡 Recommended Video Size: </span>
+                  <span className="text-[#0066FF] font-extrabold">8 MB to 25 MB</span> (30–60 sec vertical reel, 1080x1920)
+                </p>
+                <p className="mt-0.5">
+                  <span className="font-bold text-white">💡 Recommended Thumbnail: </span>
+                  <span className="text-emerald-400 font-extrabold">200 KB to 1 MB</span> (JPG/WebP)
+                </p>
+                <p className="text-[11px] text-neutral-400 mt-1">
+                  Is size me reels users ke mobile pe instant swipe aur load hongi, aur aapka 3GB free space bilkul enough rahega!
+                </p>
+              </div>
+            </div>
+
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Upload className="w-4 h-4 text-[#0066FF]" />

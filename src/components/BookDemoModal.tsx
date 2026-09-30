@@ -219,6 +219,17 @@ ${scheduleBulletList}
               </a>
             )}
 
+            {/* Instant WhatsApp Auto-Reply Guarantee Notice */}
+            <div className="p-3.5 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/30 text-left space-y-1.5">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                <span>Instant WhatsApp Auto-Confirmation Active</span>
+              </div>
+              <p className="text-[11px] text-slate-300 leading-relaxed">
+                Jaise hi aap WhatsApp par message send karenge, Ramy&apos;s Dance Studio ke official number se aapko turant <strong className="text-white">&ldquo;Thank You &amp; Demo Batch Confirmation&rdquo;</strong> message aapke WhatsApp par wapas receive hoga!
+              </p>
+            </div>
+
             <div className="bg-[#15161B] rounded-2xl p-4 text-left border border-white/10 space-y-2.5 text-xs text-slate-300 mt-3">
               <div className="flex justify-between">
                 <span>Student Name:</span>

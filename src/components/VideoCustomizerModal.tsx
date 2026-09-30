@@ -17,7 +17,8 @@ import {
   Play,
   CheckCircle2,
   Smartphone,
-  Laptop
+  Laptop,
+  HardDrive
 } from 'lucide-react';
 import { formatBytes, saveDeviceMediaFile } from '../utils/mediaStorage';
 import { uploadMediaWithProgress } from '../utils/mediaUpload';
@@ -421,6 +422,28 @@ export const VideoCustomizerModal: React.FC<VideoCustomizerModalProps> = ({
                 </p>
               </div>
             )}
+
+            {/* 3GB FREE STORAGE ALLOCATION & RECOMMENDED SIZE GUIDE */}
+            <div className="p-4 rounded-2xl bg-gradient-to-r from-[#D8F800]/10 via-[#0066FF]/10 to-[#13151B] border border-[#D8F800]/30 space-y-2 shadow-sm">
+              <div className="flex items-center justify-between text-xs font-bold">
+                <span className="flex items-center gap-1.5 text-[#D8F800]">
+                  <HardDrive className="w-4 h-4 text-[#D8F800]" />
+                  <span>3.0 GB Free Cloud Storage Active</span>
+                </span>
+                <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  Capacity: 200+ Videos
+                </span>
+              </div>
+              <div className="text-xs text-slate-300 leading-relaxed">
+                <p>
+                  <span className="font-bold text-white">💡 Hero Video Recommended Size: </span>
+                  <span className="text-[#D8F800] font-extrabold">5 MB to 15 MB</span> (15–30 sec loop, 1080p).
+                </p>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  <strong>Fayda:</strong> Is size me video har user ke mobile aur 4G/5G par 1 second me bina buffering ke chalegi, aur aapka <strong>3GB free storage</strong> kabhi khatam nahi hoga!
+                </p>
+              </div>
+            </div>
 
             {/* PROMINENT UNIVERSAL UPLOADER */}
             <div className="space-y-2">
