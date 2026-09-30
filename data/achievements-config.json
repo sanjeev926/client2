@@ -1,0 +1,44 @@
+[
+  {
+    "id": "did",
+    "iconType": "tv",
+    "title": "Dance India Dance",
+    "description": "Featured participant showcasing exceptional talent, technique, and freestyle mastery on national television.",
+    "tag": "NATIONAL TV",
+    "verifiedLabel": "Verified Platform",
+    "videoUrl": "https://www.youtube.com/@ramysdancestudio6278",
+    "videoTitle": "Watch DID Performance & Audition",
+    "videoPlatform": "youtube",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80",
+    "photoTitle": "Dance India Dance Reality Stage Spotlight",
+    "photoCaption": "High-voltage theatrical performance that received standing ovations from celebrity judges on national television."
+  },
+  {
+    "id": "igt",
+    "iconType": "ribbon",
+    "title": "India's Got Talent",
+    "description": "Ramyyysingh featured on one of India's biggest talent platforms, recognized by industry leaders.",
+    "tag": "NATIONAL STAGE",
+    "verifiedLabel": "Verified Platform",
+    "videoUrl": "https://www.youtube.com/@ramysdancestudio6278",
+    "videoTitle": "Watch India's Got Talent Showcase",
+    "videoPlatform": "youtube",
+    "imageUrl": "/ramy/ramy-igt.jpg",
+    "photoTitle": "India's Got Talent Stage Performance",
+    "photoCaption": "Master Ramy's national TV spotlight showcasing synchronized acrobatics and urban lyrical flow."
+  },
+  {
+    "id": "movies",
+    "iconType": "film",
+    "title": "Worked in Blockbuster Movies",
+    "description": "Choreography & performance in Bollywood movies like Sonu Ke Titu Ki Sweety, Tanhaji, Banjo, Baar Baar Dekho (Kala Chashma).",
+    "tag": "BOLLYWOOD HITS",
+    "verifiedLabel": "Verified Platform",
+    "videoUrl": "https://www.youtube.com/results?search_query=ramy%27s+dance+studio+kala+chashma+banjo",
+    "videoTitle": "Watch Bollywood Choreography Videos",
+    "videoPlatform": "youtube",
+    "imageUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80",
+    "photoTitle": "Bollywood Blockbuster Movies Choreography",
+    "photoCaption": "Choreography and live stage performances for Bollywood blockbusters including Kala Chashma, Banjo, and Tanhaji."
+  }
+]
